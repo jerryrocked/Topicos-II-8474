@@ -1,0 +1,283 @@
+    /* Se agrega margin 0 y padding 0 a todo el sitio. Además de dejar font family específico para todo el sitio.*/
+    
+    * {
+        margin: 0px;
+        padding: 0px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    /* Se utiliza imagen de fonto para el sitio web, la cual se repetiría como mosaico y además contiene un efecto gradiente, que va desvaneciendo su color de izquierda a derecha.*/
+    
+    body {
+        background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url(../img/planeta.png);
+        background-repeat: repeat;
+        background-size: auto;
+    }
+    /* Se agrega un pequeño porcentaje de padding en todos los lados (top, bottom, left y right), de manera que el texto y el logo quede un poco más centrado, y no a los bordes.*/
+    /* Se agrega color de fondo rojo para el header con un pequeño porcentaje de opacidad o transparencia. Se deja un width en porcentaje casi 100% para que se adapte al tamaño de las pantallas.*/
+    
+    header {
+        padding: 1% 1% 1% 1%;
+        width: 98%;
+        height: 150px;
+        background-color: rgba(108, 212, 23, 0.966);
+    }
+    /* Se ajusta el logo de header a la izquierda*/
+    
+    #logo {
+        padding-top: 1%;
+        float: left;
+    }
+    /* Se posiciona el título para que quede lo más centrado posible.*/
+    
+    #titulo {
+        padding-top: 2%;
+        padding-right: 5%;
+        float: center;
+    }
+    
+    h1 {
+        font-family: verdana;
+        color: rgb(254, 254, 255);
+        text-align: center;
+    }
+    
+    h3 {
+        font-family: verdana;
+        color: rgb(254, 254, 255);
+        text-align: center;
+    }
+    /* Se cambia display de nav a inline para que quede de forma horizontal, y no vertical como viene por defecto.*/
+    
+    li {
+        display: inline;
+        padding-left: 0.5%;
+        padding-right: 0.5%;
+    }
+
+    section li{
+
+        display:block;
+    }
+    
+    a {
+        color: aliceblue;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    nav {
+        padding-top: 3%;
+        width: 100%;
+        height: 80px;
+        background-color: rgba(26, 212, 150, 0.973);
+        color: aliceblue;
+        text-align: center;
+    }
+    
+    nav a:hover {
+        color: cornflowerblue;
+    }
+    /* Se agrega text-align justify a los parrafos, para que en los artículos tenga un mejor orden para las palabras.*/
+    
+    p {
+        padding-top: 5%;
+        padding-bottom: 5%;
+        text-align: justify;
+        line-height: 25px;
+    }
+    
+    #main {
+        margin: 0px;
+        width: 75%;
+        display: flex;
+    }
+    
+    #main h1 {
+        color: black;
+    }
+    /* Se agrega padding para centrar un poco el contenido, se da width y height 100% para que utilice todo el espacio de los contenidos.*/
+    
+    #seccion {
+        padding: 5% 5% 5% 5%;
+        width: 100%;
+        box-shadow: 5px 0px 5px 0px #000000d5;
+        height: 100%;
+        background-color: rgb(255, 255, 255);
+        opacity: 1;
+        display: inline-block;
+        margin-right: 2%;
+    }
+    
+    #seccion a {
+        color: rgb(0, 0, 255);
+    }
+    
+    #table {
+        margin-top: 5%;
+    }
+    
+    table {
+        margin-top: 5%;
+        width: 80%;
+        background-color: #bde9ba;
+    }
+    
+    table,
+    th,
+    td {
+        border: 1px solid;
+        padding: 1%;
+        text-align: center;
+        font-size: medium;
+    }
+    
+    td img {
+        height: 20px;
+        width: 20px;
+    }
+    
+    aside {
+        margin-top: 5%;
+        width: 20%;
+        height: 300px;
+        padding: 2% 2% 2% 2%;
+        box-shadow: 5px 0px 5px 0px #000000d5;
+        background-color: rgb(255, 255, 255);
+        float: right;
+        font-size: small;
+    }
+    
+    aside h3 {
+        font-size: medium;
+        color: black;
+        margin-bottom: 10%;
+    }
+    
+    aside li {
+        margin-top: 5%;
+        display: block;
+        margin-bottom: 3%;
+        text-align: left;
+    }
+    
+    aside a {
+        color: rgb(0, 0, 255);
+    }
+    
+    footer {
+        padding-top: 1%;
+        padding-left: 1%;
+        width: 99%;
+        height: 299px;
+        background-color: rgb(46, 46, 46);
+        color: rgb(201, 210, 218);
+    }
+    
+    #flogo {
+        padding-left: 5%;
+        padding-top: 5%;
+        float: left;
+    }
+    
+    #tfooter {
+        padding-top: 5%;
+        float: center;
+    }
+    /* Se inicia configuración responsive.*/
+    
+    @media only screen and (max-width: 600px) {
+        body {
+            background-size: contain;
+        }
+        /* Se ajusta tamaño y fuente de etiqueta sección, ya que disminuye el tamaño de pantallas.*/
+        #seccion {
+            height: 100%;
+            font-size: small;
+            width: 80%;
+        }
+        /* Se reduce el tamaño de las imagenes de sección.*/
+        #seccion img {
+            height: 200px;
+            width: 250px;
+        }
+        #main {
+            margin: 0px;
+            width: 100%;
+        }
+        header img {
+            padding-top: 7%;
+            height: 12%;
+            width: 12%;
+            padding-left: 5%;
+        }
+        /* Se reduce tamaño de fuente del titulo.*/
+        header h1 {
+            font-size: 15px;
+            padding-top: 5%;
+            padding-left: 8%;
+        }
+        /* Se reduce tamaño del logo de footer.*/
+        footer img {
+            padding-top: 5%;
+            height: 40px;
+            width: 40px;
+        }
+        /* Se reduce tamaño del título de footer.*/
+        footer h3 {
+            padding-top: 15%;
+            padding-left: 5%;
+            font-size: 12px;
+        }
+        footer {
+            width: 101%;
+        }
+        header {
+            width: 100%;
+        }
+        #imgsec {
+            height: 15%;
+            width: 15%;
+        }
+        nav {
+            width: 102%;
+            padding-top: 10%;
+            font-size: 0.8rem;
+        }
+        nav a:hover {
+            color: cornflowerblue;
+        }
+        table {
+            width: 50%;
+        }
+
+        aside img{
+
+            height: 30px;
+            width: 50px;
+
+        }
+        table,
+        th,
+        td {
+            font-size: small;
+        }
+        #table img {
+            height: 15px;
+            width: 15px;
+        }
+        iframe {
+            height: 200px;
+            width: 250px;
+        }
+        aside {
+            width: 40%;
+            height: 300px;
+        }
+        aside h3 {
+            font-size: 10px;
+        }
+        aside a {
+            color: rgb(0, 0, 255);
+            font-size: 8px;
+        }
+    }
